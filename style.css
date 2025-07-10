@@ -1,0 +1,94 @@
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('BG_saba2.jpg') no-repeat;
+	background-size: contain;
+	background-position: left;
+    font-family: 'Monaco', Monospace;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background: url('BG_saba1.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+    overflow: hidden; /* เพื่อให้มุมโค้งแสดงผลได้ถูกต้อง */
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 80px;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 3.5rem;
+    border: none;
+    box-sizing: border-box;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.calculator-keys button {
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(192,222,255,0.7);
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.calculator-keys button:hover {
+    background-color: #7abaff;
+}
+
+.operator {
+    background-color: #f79100;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #e68200;
+}
+
+.equal-sign {
+    background-color: #28a745;
+    color: #fff;
+    grid-column: span 2; /* ทำให้ปุ่มเท่ากับกินพื้นที่ 2 คอลัมน์ */
+}
+
+.equal-sign:hover {
+    background-color: #218838;
+}
+
+.clear {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #c82333;
+}
